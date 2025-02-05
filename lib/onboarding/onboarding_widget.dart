@@ -449,7 +449,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                                 .asValidator(context),
                           ),
                         ),
-                      ].divide(const SizedBox(height: 24.0)),
+                      ].divide(const SizedBox(height: 40.0)),
                     ),
                   ),
                   FFButtonWidget(
