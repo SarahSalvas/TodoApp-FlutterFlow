@@ -37,10 +37,9 @@ class _TasksWidgetState extends State<TasksWidget> {
       _model.quoteApiResult = await InspirationalQuoteAPICall.call();
 
       if ((_model.quoteApiResult?.succeeded ?? true)) {
-        FFAppState().quote = InspirationalQuoteAPICall.quotes(
+        FFAppState().quote = InspirationalQuoteAPICall.quote(
           (_model.quoteApiResult?.jsonBody ?? ''),
-        )!
-            .firstOrNull!;
+        )!;
         safeSetState(() {});
       } else {
         ScaffoldMessenger.of(context).showSnackBar(
